@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases
+*.db
+*.sqlite3
+
+# Large CSVs/Dataset files and uploaded PDFs
+Resume/
+data/
+*.csv
+*.xlsx
+*.pdf
+
+# Environment
+.venv/
+venv/
+env/
+.env
