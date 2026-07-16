@@ -98,6 +98,21 @@ st.markdown(
         background-color: #F8FAFC !important;
     }
 
+    /* Force dark color on headings & body text in the main content container to prevent dark theme conflicts */
+    section[data-testid="stAppViewContainer"] h1,
+    section[data-testid="stAppViewContainer"] h2,
+    section[data-testid="stAppViewContainer"] h3,
+    section[data-testid="stAppViewContainer"] h4,
+    section[data-testid="stAppViewContainer"] h5,
+    section[data-testid="stAppViewContainer"] h6 {
+        color: #0F172A !important;
+    }
+    section[data-testid="stAppViewContainer"] p,
+    section[data-testid="stAppViewContainer"] label,
+    section[data-testid="stAppViewContainer"] li {
+        color: #1E293B !important;
+    }
+
     /* Sidebar styling overrides */
     section[data-testid="stSidebar"] {
         background-color: #0F172A !important;
@@ -124,21 +139,33 @@ st.markdown(
         padding-bottom: 4px;
     }
     .stTabs [data-baseweb="tab"] {
-        font-weight: 600 !important;
-        color: #64748B !important;
         border-radius: 8px 8px 0px 0px !important;
         padding: 10px 20px !important;
         transition: all 0.2s ease !important;
         border: none !important;
         background-color: transparent !important;
     }
+    .stTabs [data-baseweb="tab"] div,
+    .stTabs [data-baseweb="tab"] p,
+    .stTabs [data-baseweb="tab"] span {
+        font-weight: 600 !important;
+        color: #64748B !important;
+    }
     .stTabs [data-baseweb="tab"]:hover {
-        color: #4F46E5 !important;
         background-color: #EEF2F6 !important;
     }
-    .stTabs [aria-selected="true"] {
+    .stTabs [data-baseweb="tab"]:hover div,
+    .stTabs [data-baseweb="tab"]:hover p,
+    .stTabs [data-baseweb="tab"]:hover span {
         color: #4F46E5 !important;
+    }
+    .stTabs [aria-selected="true"] {
         border-bottom: 2px solid #4F46E5 !important;
+    }
+    .stTabs [aria-selected="true"] div,
+    .stTabs [aria-selected="true"] p,
+    .stTabs [aria-selected="true"] span {
+        color: #4F46E5 !important;
         font-weight: 700 !important;
     }
 
@@ -298,6 +325,14 @@ st.markdown(
         background-color: #FFFFFF !important;
         margin-bottom: 8px !important;
         transition: border-color 0.2s ease !important;
+    }
+    .streamlit-expanderHeader p,
+    .streamlit-expanderHeader span,
+    .streamlit-expanderHeader div,
+    .streamlit-expanderHeader svg,
+    .streamlit-expanderHeader svg path {
+        color: #1E293B !important;
+        fill: #1E293B !important;
     }
     .streamlit-expanderHeader:hover {
         border-color: #CBD5E1 !important;
