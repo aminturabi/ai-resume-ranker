@@ -99,17 +99,17 @@ st.markdown(
     }
 
     /* Force dark color on headings & body text in the main content container to prevent dark theme conflicts */
-    section[data-testid="stAppViewContainer"] h1,
-    section[data-testid="stAppViewContainer"] h2,
-    section[data-testid="stAppViewContainer"] h3,
-    section[data-testid="stAppViewContainer"] h4,
-    section[data-testid="stAppViewContainer"] h5,
-    section[data-testid="stAppViewContainer"] h6 {
+    [data-testid="stAppViewContainer"] h1,
+    [data-testid="stAppViewContainer"] h2,
+    [data-testid="stAppViewContainer"] h3,
+    [data-testid="stAppViewContainer"] h4,
+    [data-testid="stAppViewContainer"] h5,
+    [data-testid="stAppViewContainer"] h6 {
         color: #0F172A !important;
     }
-    section[data-testid="stAppViewContainer"] p,
-    section[data-testid="stAppViewContainer"] label,
-    section[data-testid="stAppViewContainer"] li {
+    [data-testid="stAppViewContainer"] p,
+    [data-testid="stAppViewContainer"] label,
+    [data-testid="stAppViewContainer"] li {
         color: #1E293B !important;
     }
 
@@ -317,24 +317,27 @@ st.markdown(
         box-shadow: 0px 8px 16px rgba(0,0,0,0.04);
     }
 
-    /* Expander card custom outline styling */
-    .streamlit-expanderHeader {
-        font-weight: 600 !important;
+    /* Expander card custom outline styling targeting data-testid for compatibility */
+    [data-testid="stExpander"] {
         border-radius: 12px !important;
         border: 1px solid #E2E8F0 !important;
         background-color: #FFFFFF !important;
         margin-bottom: 8px !important;
         transition: border-color 0.2s ease !important;
     }
-    .streamlit-expanderHeader p,
-    .streamlit-expanderHeader span,
-    .streamlit-expanderHeader div,
-    .streamlit-expanderHeader svg,
-    .streamlit-expanderHeader svg path {
+    [data-testid="stExpander"] summary {
+        background-color: #FFFFFF !important;
+        border-radius: 12px !important;
+    }
+    [data-testid="stExpander"] summary p,
+    [data-testid="stExpander"] summary span,
+    [data-testid="stExpander"] summary div,
+    [data-testid="stExpander"] summary svg,
+    [data-testid="stExpander"] summary svg path {
         color: #1E293B !important;
         fill: #1E293B !important;
     }
-    .streamlit-expanderHeader:hover {
+    [data-testid="stExpander"]:hover {
         border-color: #CBD5E1 !important;
     }
     
