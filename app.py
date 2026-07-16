@@ -178,9 +178,13 @@ st.markdown(
     }
 
     /* Primary and default buttons styling */
-    .stButton>button {
+    .stButton>button, div[data-testid="stLinkButton"] a {
         background: linear-gradient(135deg, #4F46E5 0%, #3B82F6 100%) !important;
         color: white !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
         font-weight: 600 !important;
         border-radius: 12px !important;
         border: none !important;
@@ -189,12 +193,14 @@ st.markdown(
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
         width: 100%;
     }
-    .stButton>button:hover {
+    .stButton>button:hover, div[data-testid="stLinkButton"] a:hover {
         background: linear-gradient(135deg, #4338CA 0%, #2563EB 100%) !important;
+        color: white !important;
+        text-decoration: none !important;
         transform: translateY(-2px) !important;
         box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.25), 0 4px 6px -4px rgba(79, 70, 229, 0.25) !important;
     }
-    .stButton>button:active {
+    .stButton>button:active, div[data-testid="stLinkButton"] a:active {
         transform: translateY(0px) !important;
     }
 
@@ -1222,8 +1228,8 @@ def show_pricing_and_payment_flow():
     st.markdown(
         f"""
         Please transfer the amount for your chosen plan to our Easypaisa mobile wallet:
-        - **Easypaisa Wallet:** `{PAYMENT_INSTRUCTIONS["easypaisa_number"]}`
-        - **Account Title:** `{PAYMENT_INSTRUCTIONS["account_title"]}`
+        - **Easypaisa Wallet:** {PAYMENT_INSTRUCTIONS["easypaisa_number"]}
+        - **Account Title:** {PAYMENT_INSTRUCTIONS["account_title"]}
         """
     )
     
