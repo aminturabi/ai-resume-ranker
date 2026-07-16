@@ -55,7 +55,7 @@ FREE_PDF_LIMIT = 10
 
 PAYMENT_INSTRUCTIONS = {
     "easypaisa_number": "0311-8036997",
-    "account_title": "Amin Khan / AI Resume Ranker",
+    "account_title": "Amin Khan",
 }
 
 ATS_STAGES = ["New", "Screening", "Shortlisted", "Interview", "Offer", "Hired", "Rejected"]
@@ -111,6 +111,14 @@ st.markdown(
     [data-testid="stAppViewContainer"] label,
     [data-testid="stAppViewContainer"] li {
         color: #1E293B !important;
+    }
+    
+    /* Reset button and link inner text color to inherit parent button color */
+    [data-testid="stAppViewContainer"] button p,
+    [data-testid="stAppViewContainer"] a p,
+    [data-testid="stAppViewContainer"] button span,
+    [data-testid="stAppViewContainer"] a span {
+        color: inherit !important;
     }
 
     /* Sidebar styling overrides */
@@ -1220,7 +1228,7 @@ def show_pricing_and_payment_flow():
     )
     
     st.markdown("**Need another payment method?**")
-    st.write("If you wish to pay via JazzCash, Bank Transfer, or any other method, please contact us directly:")
+    st.write("If you wish to pay via Bank Transfer or any other payment method, please contact us directly:")
     st.link_button("💬 Chat on WhatsApp", "https://wa.me/923118036997?text=Hi%2C%20I%20would%20like%20to%20buy%20a%20subscription%20plan%20for%20AI%20Resume%20Ranker%20ATS.", use_container_width=True)
     
     st.divider()
