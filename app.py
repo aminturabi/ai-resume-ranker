@@ -177,8 +177,8 @@ st.markdown(
         font-weight: 700 !important;
     }
 
-    /* Primary and default buttons styling */
-    .stButton>button, div[data-testid="stLinkButton"] a {
+    /* Primary, default, and form submit buttons styling */
+    .stButton>button, .stFormSubmitButton>button, div[data-testid="stLinkButton"] a {
         background: linear-gradient(135deg, #4F46E5 0%, #3B82F6 100%) !important;
         color: white !important;
         text-decoration: none !important;
@@ -193,14 +193,14 @@ st.markdown(
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
         width: 100%;
     }
-    .stButton>button:hover, div[data-testid="stLinkButton"] a:hover {
+    .stButton>button:hover, .stFormSubmitButton>button:hover, div[data-testid="stLinkButton"] a:hover {
         background: linear-gradient(135deg, #4338CA 0%, #2563EB 100%) !important;
         color: white !important;
         text-decoration: none !important;
         transform: translateY(-2px) !important;
         box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.25), 0 4px 6px -4px rgba(79, 70, 229, 0.25) !important;
     }
-    .stButton>button:active, div[data-testid="stLinkButton"] a:active {
+    .stButton>button:active, .stFormSubmitButton>button:active, div[data-testid="stLinkButton"] a:active {
         transform: translateY(0px) !important;
     }
 
